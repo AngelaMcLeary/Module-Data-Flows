@@ -36,7 +36,7 @@ function submit() {
     pages.value == null ||
     pages.value == "" ||
     pages.value <= 0 ||
-    pages.value != parseInt() 
+    pages.value != parseInt()
   ) {
     alert("Please fill all fields with valid input!");
     return false;
@@ -58,7 +58,7 @@ function render() {
   let table = document.getElementById("display");
   let rowsNumber = table.rows.length;
   //delete old table
-  for (let n = rowsNumber - 1; n > 0; n-- ){
+  for (let n = rowsNumber - 1; n > 0; n--) {
     table.deleteRow(n);
   }
   //insert updated row and cells
