@@ -7,6 +7,10 @@
 .btn {
   display: block;
 }
+.form-control {
+  border-style: solid;
+  border-color: lightslategrey;
+}
 
 .form-check-label {
   padding-left: 20px;
@@ -14,5 +18,34 @@
 }
 
 button.btn-info {
+  background-color: blue;
+  border-color: blue;
+  color: #fff;
   margin: 20px;
+}
+
+.btn-success {
+  background-color: #0d4a0d;
+  border-color: #0d4a0d;
+  color: #fff;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #1f6e1f;
+  border-color: #1f6e1f;
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: #9f6000;
+  border-color: #9f6000;
+  color: #fff;
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: #b76e01;
+  border-color: #b76e01;
+  color: #fff;
 }
