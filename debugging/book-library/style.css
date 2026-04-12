@@ -1,7 +1,12 @@
+.jumbotron {
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+}
+
 .form-group {
   width: 400px;
   height: 300px;
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
 .btn {
