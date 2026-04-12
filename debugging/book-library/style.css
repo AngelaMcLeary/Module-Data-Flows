@@ -3,10 +3,21 @@
   margin-bottom: 1rem;
 }
 
+.jumbotron h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
 .form-group {
   width: 400px;
   height: 300px;
   padding-left: 50px;
+}
+
+#check {
+  margin-left: 0;
+  margin-top: 10px;
 }
 
 .btn {
@@ -23,11 +34,11 @@
   margin: 5px 0px 5px 0px;
 }
 
-button.btn-info {
+.btn-info {
   background-color: blue;
   border-color: blue;
   color: #fff;
-  margin: 20px;
+  margin: 20px 20px 20px 50px;
 }
 
 .btn-success {
