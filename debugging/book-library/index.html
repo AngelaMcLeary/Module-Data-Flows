@@ -1,96 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Book Library</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <title>Book Library</title>
 
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
-      defer
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      defer
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <div class="jumbotron text-center">
-      <h1>Library</h1>
-      <h2>Add books to your virtual library</h2>
-    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-    <button data-toggle="collapse" data-target="#demo" class="btn btn-info">
-      Add new book
-    </button>
+<body>
+  <div class="jumbotron text-center">
+    <h1>Library</h1>
+    <h2>Add books to your virtual library</h2>
+  </div>
 
-    <div id="demo" class="collapse">
+  <button data-toggle="collapse" data-target="#demo" class="btn btn-info">
+    Add new book
+  </button>
+
+  <div id="demo" class="collapse">
+    <form>
       <div class="form-group">
         <label for="title">Title:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          name="title"
-          required
-        />
+        <input type="text" class="form-control" id="title" name="title" required />
         <label for="author">Author: </label>
-        <input
-          type="text"
-          class="form-control"
-          id="author"
-          name="author"
-          required
-        />
+        <input type="text" class="form-control" id="author" name="author" required />
         <label for="pages">Pages:</label>
-        <input
-          type="number"
-          class="form-control"
-          id="pages"
-          name="pages"
-          required
-        />
+        <input type="number" class="form-control" id="pages" name="pages" required />
         <label class="form-check-label">
-          <input
-            type="checkbox"
-            class="form-check-input"
-            id="check"
-            value=""
-          />Read
+          <input type="checkbox" class="form-check-input" id="check" value="" />Read
         </label>
-        <input
-          type="submit"
-          value="Submit"
-          class="btn btn-primary"
-          onclick="submit()"
-        />
+        <input type="submit" value="Submit" class="btn btn-primary" onclick="submit()" />
       </div>
-    </div>
+    </form>
+  </div>
 
-    <table class="table" id="display">
-      <thead class="thead-dark">
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Number of Pages</th>
-          <th>Read</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+  <table class="table" id="display">
+    <thead class="thead-dark">
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Number of Pages</th>
+        <th>Read</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
-    <script src="script.js" defer></script>
-  </body>
+  <script src="script.js" defer></script>
+</body>
+
 </html>
