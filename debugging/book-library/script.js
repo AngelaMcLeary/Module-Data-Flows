@@ -30,13 +30,13 @@ const check = document.getElementById("check");
 function submit() {
   if (
     title.value == null ||
-  title.value == "" ||
-  author.value == null ||
-  author.value == "" ||
-  pages.value == null ||
-  pages.value == "" ||
-  parseInt(pages.value) <= 0 ||
-  isNaN(parseInt(pages.value))
+    title.value == "" ||
+    author.value == null ||
+    author.value == "" ||
+    pages.value == null ||
+    pages.value == "" ||
+    parseInt(pages.value) <= 0 ||
+    isNaN(parseInt(pages.value))
   ) {
     alert("Please fill all fields with valid input!");
     return false;
@@ -44,6 +44,12 @@ function submit() {
     let book = new Book(title.value, author.value, pages.value, check.checked);
     myLibrary.push(book);
     render();
+
+    //clears the form for new entries
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    check.checked = false;
   }
 }
 
