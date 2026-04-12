@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 window.addEventListener("load", function (e) {
   populateStorage();
@@ -101,10 +101,10 @@ function render() {
     //add delete button to every row and render again
     let deleteBtn = document.createElement("button");
     deleteBtn.id = i + 5;
-    deleteCell.appendChild(delBtn);
+    deleteCell.appendChild(deleteBtn);
     deleteBtn.className = "btn btn-warning";
     deleteBtn.innerHTML = "Delete";
-    delBtn.addEventListener("click", function (index) {
+    deleteBtn.addEventListener("click", function (index) {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
