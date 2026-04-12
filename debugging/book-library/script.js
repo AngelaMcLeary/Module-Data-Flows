@@ -7,7 +7,7 @@ window.addEventListener("load", function (e) {
 
 function populateStorage() {
   if (myLibrary.length == 0) {
-    let book1 = new Book("Robison Crusoe", "Daniel Defoe", "252", true);
+    let book1 = new Book("Robinson Crusoe", "Daniel Defoe", "252", true);
     let book2 = new Book(
       "The Old Man and the Sea",
       "Ernest Hemingway",
@@ -30,13 +30,13 @@ const check = document.getElementById("check");
 function submit() {
   if (
     title.value == null ||
-    title.value == "" ||
-    author.value == null ||
-    author.value == "" ||
-    pages.value == null ||
-    pages.value == "" ||
-    pages.value <= 0 ||
-    pages.value != parseInt()
+  title.value == "" ||
+  author.value == null ||
+  author.value == "" ||
+  pages.value == null ||
+  pages.value == "" ||
+  parseInt(pages.value) <= 0 ||
+  isNaN(parseInt(pages.value))
   ) {
     alert("Please fill all fields with valid input!");
     return false;
