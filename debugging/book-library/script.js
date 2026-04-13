@@ -30,15 +30,20 @@ const check = document.getElementById("check");
 function submit() {
   if (
     !title.value ||
-    !author.value||
+    !author.value ||
     !pages.value ||
-    Number(pages.value) <= 0||
+    Number(pages.value) <= 0 ||
     Number.isNaN(Number(pages.value))
   ) {
     alert("Please fill all fields with valid input!");
     return false;
   } else {
-    let book = new Book(title.value, author.value, Number(pages.value), check.checked);
+    let book = new Book(
+      title.value,
+      author.value,
+      Number(pages.value),
+      check.checked
+    );
     myLibrary.push(book);
     render();
 
@@ -95,11 +100,12 @@ function render() {
     deleteBtn.className = "btn btn-warning";
     deleteBtn.innerHTML = "Delete";
     deleteCell.appendChild(deleteBtn);
-    
+
     deleteBtn.addEventListener("click", function () {
-      alert(`You've deleted title: ${myLibrary[i].title}`);
+      const deleteTitle = myLibrary[i].title;
       myLibrary.splice(i, 1);
       render();
+      alert(`You've deleted title: ${deleteTitle}`);
     });
   }
 }
