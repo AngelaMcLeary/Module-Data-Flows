@@ -29,14 +29,11 @@ const check = document.getElementById("check");
 //via Book function and start render function
 function submit() {
   if (
-    title.value == null ||
-    title.value == "" ||
-    author.value == null ||
-    author.value == "" ||
-    pages.value == null ||
-    pages.value == "" ||
-    parseInt(pages.value) <= 0 ||
-    isNaN(parseInt(pages.value))
+    !title.value ||
+    !author.value||
+    !pages.value ||
+    Number(pages.value) <= 0||
+    Number.isNaN(Number(pages.value))
   ) {
     alert("Please fill all fields with valid input!");
     return false;
