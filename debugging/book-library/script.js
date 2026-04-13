@@ -41,7 +41,7 @@ function submit() {
     alert("Please fill all fields with valid input!");
     return false;
   } else {
-    let book = new Book(title.value, author.value, pages.value, check.checked);
+    let book = new Book(title.value, author.value, Number(pages.value), check.checked);
     myLibrary.push(book);
     render();
 
@@ -56,7 +56,7 @@ function submit() {
 function Book(title, author, pages, check) {
   this.title = title;
   this.author = author;
-  this.pages = pages;
+  this.pages = Number(pages);
   this.check = check;
 }
 
