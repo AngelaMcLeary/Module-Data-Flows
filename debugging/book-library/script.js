@@ -79,9 +79,9 @@ function render() {
 
     //add and wait for action for read/unread button
     let changeBtn = document.createElement("button");
-    changeBtn.id = i;
     changeBtn.className = "btn btn-success";
     wasReadCell.appendChild(changeBtn);
+
     let readStatus = myLibrary[i].check ? "Yes" : "No";
     changeBtn.innerText = readStatus;
 
@@ -92,10 +92,10 @@ function render() {
 
     //add delete button to every row and render again
     let deleteBtn = document.createElement("button");
-    deleteBtn.id = i + 5;
-    deleteCell.appendChild(deleteBtn);
     deleteBtn.className = "btn btn-warning";
     deleteBtn.innerHTML = "Delete";
+    deleteCell.appendChild(deleteBtn);
+    
     deleteBtn.addEventListener("click", function (index) {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
