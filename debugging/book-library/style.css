@@ -67,3 +67,12 @@
   color: #fff;
 }
 
+.toast{
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.toast.visible {
+  opacity: 1;
+}
+

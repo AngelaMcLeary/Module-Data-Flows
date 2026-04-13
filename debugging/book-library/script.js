@@ -64,10 +64,10 @@ function Book(title, author, pages, check) {
 function alertDeleteToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;
-  toast.classList.add("show");
+  toast.classList.add("visible");
 
   setTimeout(() => {
-    toast.classList.remove("show");
+    toast.classList.remove("visible");
   }, 2000);
 }
 function render() {
