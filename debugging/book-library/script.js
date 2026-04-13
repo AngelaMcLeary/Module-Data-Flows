@@ -82,12 +82,7 @@ function render() {
     changeBtn.id = i;
     changeBtn.className = "btn btn-success";
     wasReadCell.appendChild(changeBtn);
-    let readStatus = "";
-    if (myLibrary[i].check == false) {
-      readStatus = "No";
-    } else {
-      readStatus = "Yes";
-    }
+    let readStatus = myLibrary[i].check ? "Yes" : "No";
     changeBtn.innerText = readStatus;
 
     changeBtn.addEventListener("click", function () {
