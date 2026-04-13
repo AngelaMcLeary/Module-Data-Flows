@@ -96,7 +96,7 @@ function render() {
     deleteBtn.innerHTML = "Delete";
     deleteCell.appendChild(deleteBtn);
     
-    deleteBtn.addEventListener("click", function (index) {
+    deleteBtn.addEventListener("click", function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
