@@ -63,12 +63,12 @@ function Book(title, author, pages, check) {
 }
 function alertDeleteToast(message) {
   const toast = document.getElementById("toast");
-  toast.textContent = message;
+  toast.innerHTML = message;
   toast.classList.add("visible");
 
   setTimeout(() => {
     toast.classList.remove("visible");
-  }, 2000);
+  }, 4000);
 }
 function render() {
   let table = document.getElementById("display");
@@ -113,7 +113,7 @@ function render() {
       const deleteTitle = myLibrary[i].title;
       myLibrary.splice(i, 1);
       render();
-      alertDeleteToast(`You've deleted title: ${deleteTitle}`);
+      alertDeleteToast(`You've deleted title: <br> <strong>${deleteTitle}</strong>`);
     });
   }
 }

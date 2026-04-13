@@ -70,8 +70,9 @@
 
 .toast {
   position: fixed;
-  top: 120px;
+  top: 130px;
   left: 50%;
+  font-size: 1rem;
   transform: translateX(-50%);
   background: #a84600;
   color: white;
@@ -83,6 +84,7 @@
 }
 
 .toast.visible {
+  min-width: 170px;
   opacity: 1;
 }
 
