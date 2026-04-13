@@ -113,7 +113,7 @@ function render() {
       const deleteTitle = myLibrary[i].title;
       myLibrary.splice(i, 1);
       render();
-      alert(`You've deleted title: ${deleteTitle}`);
+      alertDeleteToast(`You've deleted title: ${deleteTitle}`);
     });
   }
 }
