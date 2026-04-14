@@ -65,6 +65,15 @@ function Book(title, author, pages, check) {
   this.pages = Number(pages);
   this.check = check;
 }
+
+function escapeSpecialCharacters(str) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 function alertDeleteToast(message) {
   const toast = document.getElementById("toast");
   toast.innerHTML = message;
@@ -118,7 +127,7 @@ function render() {
       myLibrary.splice(i, 1);
       render();
       alertDeleteToast(
-        `You've deleted title: <br> <strong>${deleteTitle}</strong>`
+        `You've deleted title: <br> <strong>${escapeSpecialCharacters(deleteTitle)}</strong>`
       );
     });
   }
